@@ -8,6 +8,7 @@
     --overlay-cl: #2E2F42;
     --hero-bgr: #2E2F42;
     --bgr-cl: #fff;
+    --success-footer: #31D0AA;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -145,6 +146,51 @@ img{
     margin-top: 16px;
     margin-bottom: 0;
 }
+
+.logo-container{
+display: flex;
+gap: 120px;
+}
+
+.social-media{
+    display: block;
+}
+
+.social-list-icon-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.footer-media{
+    display: block;
+}
+
+.media{
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 0,66;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.social-list-footer {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-position: center center;
+    color: #F4F4FD;
+    padding: 12px;
+}
+
+.social-list-footer:hover,
+.social-list-footer:focus{
+    background-color: var(--success-footer) ;
+}
 /*-----------FOOTER--------------*/
 
 /*=============PORTFOLIO SITE==============*/
@@ -213,9 +259,13 @@ img{
 
 .img-content{
     box-sizing: border-box;
-    
     margin-right: 24px;
     margin-bottom: 48px;
+}
+
+.img-content:hover,
+.img-content:focus{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .desc-name{
@@ -251,7 +301,19 @@ img{
 
 /*-------------HERO SECTION--------*/
 .hero{
-    background-color: var(--overlay-cl);
+    max-width: 1440px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+     url("../images/hero/people-office\ 1.jpg");
+    background-color: var(--hero-bgr);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     text-align: center;
 }
 
@@ -301,9 +363,45 @@ img{
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
 .adventage{
     display: flex;
     gap: 24px;
+}
+
+.list-item{
+    width: 264px;
+    height: 112px;
+    background: #F4F4FD;
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.list-item::before{
+    display: block;
+    content: "";
+    height: 112px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-anttena{
+background-image: url("../images/icon_section1/antenna.svg");
+
+}
+
+.icon-diagram {
+    background-image: url("../images/icon_section1/diagram.svg");
+}
+
+.icon-clock {
+    background-image: url("../images/icon_section1/clock.svg");
+}
+
+.icon-astronaut {
+    background-image: url("../images/icon_section1/astronaut.svg");
 }
 .header-advantage{
     font-weight: 500;
@@ -325,10 +423,6 @@ img{
 /*-------------/SECTION 1-----------*/
 
 /*-------------SECTION 2-----------*/
-.section-doing{
-    padding-top: 0;
-}
-
 .header-two{
     font-weight: 700;
     font-size: 36px;
@@ -354,7 +448,7 @@ img{
     background-color: var(--liht-bgr);
 }
 
-.header2-1{
+.header-free{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -375,6 +469,8 @@ img{
 
 .team-card{
     background-color: var(--bgr-cl);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team{
@@ -397,6 +493,72 @@ img{
     letter-spacing: 0.02em;
     color:var(--body-txt);
     margin-top: 0;
+    margin-bottom: 8px;
 }
+
+.social-list-icon{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.social-list{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--focused-link);
+    background-position: center center;
+    color:#F4F4FD;
+    padding: 12px;
+}
+
 /*-------------/SECTION 3-----------*/
+
+/*-------------SECTION 4-----------*/
+.header-four{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 0,9;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--overlay-cl);
+}
+
+.customer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    gap:24px;
+}
+
+
+
+.partner{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--helper-txt);
+    border-radius: 4px;
+    color:var(--helper-txt);
+    width: 168px;
+    height: 88px;
+}
+
+.partner:hover,
+.partner:focus{
+    color:var(--pressed-btn);
+    border: 1px solid var(--pressed-btn);
+}
+.brend{
+    fill: var(--helper-txt);
+}
+
+.brend:hover .brend,
+.brend:focus .brend{
+    fill:var(--pressed-btn)
+}
+/*-------------/SECTION 4-----------*/
 /*==============/STUDIO SITE=================*/
